@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:food_delivery/util/colors.dart';
 import 'package:food_delivery/widgets/app_icon.dart';
 import 'package:food_delivery/widgets/big_text.dart';
-import 'package:flutter/src/widgets/container.dart';
 import 'package:food_delivery/widgets/expandable_text_widget.dart';
 import '../../util/dimensions.dart';
 
