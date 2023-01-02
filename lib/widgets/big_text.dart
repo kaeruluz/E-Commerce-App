@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-
 import 'package:food_delivery/util/dimensions.dart';
 
 class BigText extends StatelessWidget {

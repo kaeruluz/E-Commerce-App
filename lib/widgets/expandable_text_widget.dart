@@ -1,11 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:food_delivery/util/colors.dart';
 import 'package:food_delivery/widgets/small_text.dart';
-import 'package:get/get.dart';
-
 import '../util/dimensions.dart';
 
 class ExpandableTextWidget extends StatefulWidget {
