@@ -5,7 +5,6 @@ import 'package:food_delivery/data/repository/popular_product_repo.dart';
 import 'package:food_delivery/util/app_constants.dart';
 import 'package:get/get.dart';
 import 'package:food_delivery/controllers/popular_product_controller.dart';
-
 import '../controllers/recommended_product_controller.dart';
 import '../data/repository/recommended_product_repo.dart';
 
