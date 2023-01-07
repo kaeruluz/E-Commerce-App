@@ -175,7 +175,7 @@ class PopularFoodDetail extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                )
+                ),
               ],
             ),
           );
