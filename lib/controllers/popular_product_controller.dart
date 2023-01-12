@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/controllers/cart_controller.dart';
+import 'package:food_delivery/models/cart_model.dart';
 import 'package:food_delivery/models/products_model.dart';
 import 'package:food_delivery/util/colors.dart';
 import 'package:get/get.dart';
@@ -87,5 +88,9 @@ class PopularProductController extends GetxController {
 
   int get totalItems {
     return _cart.totalItems;
+  }
+
+  List<CartModel> get getItems {
+    return _cart.getItems;
   }
 }
