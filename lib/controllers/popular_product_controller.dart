@@ -34,8 +34,10 @@ class PopularProductController extends GetxController {
   void setQuantity(bool isIncrement) {
     if (isIncrement) {
       _quantity = checkedQuantity(_quantity + 1);
+      // print("no of items " + _quantity.toString());
     } else {
       _quantity = checkedQuantity(_quantity - 1);
+      // print("no of items " + _quantity.toString());
     }
     update();
   }
@@ -76,15 +78,14 @@ class PopularProductController extends GetxController {
     print("the quantity in cart is " + _inCartItems.toString());
   }
 
-  void addItem(
-    ProductModel product,
-  ) {
-    // if (quantity > 0) {
+  void addItem(ProductModel product) {
     _cart.addItem(product, _quantity);
     _quantity = 0;
     _inCartItems = _cart.getQuantity(product);
-    //   } else {
+    update();
+  }
 
-    //  }
+  int get totalItems {
+    return _cart.totalItems;
   }
 }
