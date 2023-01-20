@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/controllers/cart_controller.dart';
+import 'package:food_delivery/helper/route_helper.dart';
 import 'package:food_delivery/pages/food/recommended_food_detail.dart';
 import 'package:food_delivery/pages/home/main_food_page.dart';
 import 'package:food_delivery/util/app_constants.dart';
@@ -34,7 +35,7 @@ class CartPage extends StatelessWidget {
                   SizedBox(width: Dimensions.width20 * 5),
                   GestureDetector(
                     onTap: () {
-                      Get.to(() => const MainFoodPage());
+                      Get.toNamed(RouteHelper.getInitial());
                     },
                     child: AppIcon(
                       icon: Icons.home_outlined,
@@ -62,8 +63,9 @@ class CartPage extends StatelessWidget {
                   context: context,
                   child: GetBuilder<CartController>(
                     builder: (cartController) {
+                      var _cartList = cartController.getItems;
                       return ListView.builder(
-                          itemCount: cartController.getItems.length,
+                          itemCount: _cartList.length,
                           itemBuilder: (_, index) {
                             return Container(
                               height: Dimensions.height20 * 5,
@@ -144,8 +146,9 @@ class CartPage extends StatelessWidget {
                                                         Dimensions.width10 / 2,
                                                   ),
                                                   BigText(
-                                                      text:
-                                                          "0"), // popularProduct.inCartItem.toString()),
+                                                      text: _cartList[index]
+                                                          .quantity
+                                                          .toString()), // popularProduct.inCartItem.toString()),
                                                   SizedBox(
                                                       width:
                                                           Dimensions.width10 /

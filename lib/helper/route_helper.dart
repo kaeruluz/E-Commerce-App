@@ -8,7 +8,7 @@ class RouteHelper {
   static const String initial = "/";
   static const String popularFood = "/popular-food";
   static const String recommendedFood = "/recommended-food";
-  static const String cartPage = "/";
+  static const String cartPage = "/cart-page";
 
   static String getInitial() => '$initial';
   static String getPopularFood(int pageId) => '$popularFood?pageId=$pageId';
