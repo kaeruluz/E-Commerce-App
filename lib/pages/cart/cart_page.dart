@@ -26,11 +26,16 @@ class CartPage extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  AppIcon(
-                    icon: Icons.arrow_back_ios,
-                    iconColor: Colors.white,
-                    backgroundColor: AppColors.mainColor,
-                    iconSize: Dimensions.iconSize24,
+                  GestureDetector(
+                    onTap: () {
+                      Get.toNamed(RouteHelper.getInitial());
+                    },
+                    child: AppIcon(
+                      icon: Icons.arrow_back_ios,
+                      iconColor: Colors.white,
+                      backgroundColor: AppColors.mainColor,
+                      iconSize: Dimensions.iconSize24,
+                    ),
                   ),
                   SizedBox(width: Dimensions.width20 * 5),
                   GestureDetector(
@@ -133,7 +138,10 @@ class CartPage extends StatelessWidget {
                                                 child: Row(children: [
                                                   GestureDetector(
                                                     onTap: () {
-                                                      //  popularProduct.setQuantity(false);
+                                                      cartController.addItem(
+                                                          _cartList[index]
+                                                              .product!,
+                                                          -1);
                                                     },
                                                     child: Icon(
                                                       Icons.remove,
@@ -155,7 +163,11 @@ class CartPage extends StatelessWidget {
                                                               2),
                                                   GestureDetector(
                                                     onTap: () {
-                                                      //  popularProduct.setQuantity(true);
+                                                      cartController.addItem(
+                                                          _cartList[index]
+                                                              .product!,
+                                                          1);
+                                                      print(" being tapped");
                                                     },
                                                     child: Icon(
                                                       Icons.add,
