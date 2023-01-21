@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
             backgroundColor: Colors.white,
             color: Colors.grey.shade400,
             activeColor: AppColors.mainColor,
-            tabBackgroundColor: Colors.grey.shade800,
+            tabBackgroundColor: Colors.grey.shade600,
             gap: 8,
             onTabChange: onTapNav,
             padding: const EdgeInsets.all(10),
