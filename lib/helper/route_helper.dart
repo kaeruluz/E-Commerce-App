@@ -4,6 +4,8 @@ import 'package:food_delivery/pages/food/recommended_food_detail.dart';
 import 'package:food_delivery/pages/home/main_food_page.dart';
 import 'package:get/get.dart';
 
+import '../pages/home/home_bar.dart';
+
 class RouteHelper {
   static const String initial = "/";
   static const String popularFood = "/popular-food";
@@ -19,11 +21,7 @@ class RouteHelper {
 
   static List<GetPage> routes = [
     GetPage(
-        name: initial,
-        page: () {
-          return const MainFoodPage();
-        },
-        transition: Transition.fadeIn),
+        name: initial, page: () => HomePage(), transition: Transition.fadeIn),
     GetPage(
         name: popularFood,
         page: () {
