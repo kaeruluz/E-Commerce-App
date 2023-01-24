@@ -9,4 +9,5 @@ class AppConstants {
 
   static const String TOKEN = "DBtoken";
   static const String CART_LIST = "Cart-List";
+  static const String CART_HISTORY_LIST = "Cart-History-List";
 }

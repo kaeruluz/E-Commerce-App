@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:food_delivery/data/repository/cart_repo.dart';
 import 'package:food_delivery/models/products_model.dart';
 import 'package:food_delivery/pages/cart/cart_page.dart';
@@ -112,9 +113,19 @@ class CartController extends GetxController {
 
   set setCart(List<CartModel> items) {
     storageItems = items;
-    print("Length of items" + storageItems.length.toString());
+    // print("Length of items" + storageItems.length.toString());
     for (int i = 0; i < storageItems.length; i++) {
       _items.putIfAbsent(storageItems[i].product!.id!, () => storageItems[i]);
     }
+  }
+
+  void addToHistory() {
+    cartRepo.addToCartHistoryList();
+    clear();
+  }
+
+  void clear() {
+    _items = {};
+    update();
   }
 }
