@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       return GetBuilder<RecommendedProductController>(builder: (_) {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          //home: const SplashScreen(),
+          //home: const SplashScreen(),   
           initialRoute: RouteHelper.getSplashPage(),
           getPages: RouteHelper.routes,
         );
