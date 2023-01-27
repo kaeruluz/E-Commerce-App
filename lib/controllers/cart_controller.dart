@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:food_delivery/data/repository/cart_repo.dart';
 import 'package:food_delivery/models/products_model.dart';
-import 'package:food_delivery/pages/cart/cart_page.dart';
 import 'package:get/get.dart';
 import '../models/cart_model.dart';
 import '../util/colors.dart';
@@ -127,5 +125,9 @@ class CartController extends GetxController {
   void clear() {
     _items = {};
     update();
+  }
+
+  List<CartModel> getCartHistoryList() {
+    return cartRepo.getCartHistoryList();
   }
 }
