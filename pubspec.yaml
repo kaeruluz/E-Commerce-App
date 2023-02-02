@@ -29,9 +29,7 @@ dependencies:
   intl: ^0.18.0
   cupertino_icons: ^1.0.2
   google_nav_bar: ^5.0.6
-  line_awesome_flutter: ^2.0.0
-  animated_theme_switcher: ^2.0.7
-  flutter_screenutil: ^5.6.1
+  
 
 dev_dependencies:
   flutter_test:
@@ -64,17 +62,7 @@ flutter:
   # have a "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  fonts:
-    - family: SFProText
-      fonts:
-        - asset: assets/fonts/SF-Pro-Text-Thin.otf
-          weight: 100
-        - asset: assets/fonts/SF-Pro-Text-Regular.otf
-          weight: 400
-        - asset: assets/fonts/SF-Pro-Text-Medium.otf
-          weight: 500
-        - asset: assets/fonts/SF-Pro-Text-Bold.otf
-          weight: 700
+  #font:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
