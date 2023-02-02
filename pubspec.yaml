@@ -29,6 +29,8 @@ dependencies:
   intl: ^0.18.0
   cupertino_icons: ^1.0.2
   google_nav_bar: ^5.0.6
+  sqflite: ^2.2.4+1
+
   
 
 dev_dependencies:
